@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+/* Reset & Base */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body { background:#f5f5f5; color:#333; scroll-behavior:smooth; }
+
+/* Navbar */
+header {
+  background: linear-gradient(90deg,#222,#00adb5);
+  color:#fff;
+  padding:1rem 2rem;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 6px rgba(0,0,0,0.3);
+}
+nav a {
+  color:#fff;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+nav a:hover { color:#ffdd59; }
+
+/* Sections */
+section { padding:60px 20px; max-width:1000px; margin:auto; }
+h2 { text-align:center; margin-bottom:30px; font-size:2rem; color:#222; position:relative; }
+h2::after {
+  content:'';
+  display:block;
+  width:60px;
+  height:4px;
+  background:#00adb5;
+  margin:10px auto 0;
+  border-radius:2px;
+}
+
+/* About */
+.about {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+  background:linear-gradient(120deg,#ffffff,#e0f7fa);
+  padding:40px;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+.about img {
+  width:180px;
+  border-radius:50%;
+  border:5px solid #00adb5;
+  transition:transform 0.3s;
+}
+.about img:hover { transform:scale(1.05); }
+.about p { flex:1; font-size:1.1rem; color:#555; }
+
+/* Projects */
+.projects {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.project-card {
+  background:#fff;
+  border-radius:15px;
+  padding:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transition:transform 0.3s,box-shadow 0.3s;
+}
+.project-card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 15px 25px rgba(0,0,0,0.2);
+}
+.project-card img { width:100%; border-radius:10px; margin-bottom:15px; }
+.project-card h3 { margin-bottom:10px; color:#00adb5; }
+
+/* Contact */
+.contact form {
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:500px;
+  margin:auto;
+  background:#fff;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+input,textarea {
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  width:100%;
+  font-size:1rem;
+  transition:border 0.3s;
+}
+input:focus,textarea:focus { border-color:#00adb5; outline:none; }
+button {
+  padding:12px;
+  background:#00adb5;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:1rem;
+  font-weight:600;
+  transition:0.3s;
+}
+button:hover { background:#007a82; }
+.contact p { text-align:center; margin-top:20px; font-size:1rem; color:#555; }
+
+/* Footer */
+footer {
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+  font-size:0.9rem;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .about { flex-direction:column; text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <h1>My Portfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- About Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <img src="photoof.jpg" alt="Profile Picture">
+    <p>
+     Hi, <strong>I’m Abarnaa Sree</strong>, passionate about Artificial Intelligence and building 
+     next-generation decision support systems. 
+     I have a strong interest in <strong>Data Analysis</strong> and am skilled in <strong>GenAI, MySQL, React.js, HTML,
+       CSS</strong> and<strong>JavaScript</strong>. I enjoy creating full-stack applications that solve real-world problems.
+      <br><br>
+      📄 <a href="resume.pdf" download>Download My Resume</a>
+
+    </p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+
+      <h3>Travel Management Suite</h3>
+      <p>A Spring Boot project with MySQL and HTML/CSS frontend for trip planning.</p>
+    </div>
+    <div class="project-card">
+
+      <h3>AI-Powered Translator App</h3>
+      <p>A Python Flask project with GenAI integration and React.js/HTML/CSS frontend for real-time multilingual translations.</p>
+    </div>
+    <div class="project-card">
+
+      <h3>AI Jump Tracker</h3>
+      <p>An AI-powered app that tracks and counts jump rope repetitions in real time, notifying when the target is reached.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Get in Touch</h2>
+
+  <div class="contact-card">
+    <div class="contact-item">
+      <i class='bx bx-envelope'></i>
+      <a href="mailto:abarnaasree23@gmail.com">abarnaasree23@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-item">
+      <i class='bx bxl-linkedin-square'></i>
+      <a href="https://www.linkedin.com/in/abarnaa-sree-n-0998272bb/" target="_blank">
+        LinkedIn Profile
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-item">
+      <i class='bx bxl-github'></i>
+      <a href="https://github.com/AbarnaaSree" target="_blank">
+        GitHub Profile
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-item">
+      <i class='bx bx-phone'></i>
+      <a href="tel:+919487822794">+91 9487822794</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+</section>
+
+<style>
+/* Contact Cards */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* reduce spacing between cards */
+  max-width: 400px;
+  margin: 0 auto; /* center if needed */
+  padding: 0; /* remove extra padding */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between icon and text */
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  word-break: break-word; /* wrap long links */
+}
+.contact-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+ .contact-card {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between icon and text */
+  padding: 10px 15px; /* smaller padding */
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card i {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #00adb5;
+}
+
+.contact-card span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media(max-width:480px){
+  .contact-cards { gap: 15px; }
+  .contact-card span { font-size: 0.9rem; }
+  .contact-card i { font-size: 1.3rem; margin-right: 10px; }
+}
+</style>
+
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Your Name | Portfolio</p>
+</footer>
+
+</body>
+</html>
